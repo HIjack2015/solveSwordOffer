@@ -1,5 +1,5 @@
-# Definition for a binary tree node
-from tree.test import TreeNode, Tree
+# Definition for a binary 树 node
+from 树.test import TreeNode, Tree
 
 
 class Solution:
