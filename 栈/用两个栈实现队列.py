@@ -15,10 +15,6 @@ class Stack:
     def is_empty(self):
         return len(self.inner) == 0
 class CQueue:
-
-
-
-
     def appendTail(self, value: int) -> None:
         self.s1.push(value)
         return

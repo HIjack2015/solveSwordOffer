@@ -14,6 +14,7 @@ class D_link_list:
     def __init__(self):
         self.head = D_link_node(-1, -1)
         self.tail = D_link_node(-1, -1)
+
         self.head.next = self.tail
         self.tail.prefix = self.head
         self.length = 0
