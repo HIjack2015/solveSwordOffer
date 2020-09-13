@@ -1,4 +1,7 @@
 # Definition for a binary 树 node.
+import collections
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -6,24 +9,14 @@ class TreeNode:
         self.right = None
 
 class Solution:
-    def levelOrder(self, root: TreeNode) -> [[int]]:
-        if not root:
-            return []
-        result=[[root.val]]
-        temp_list=[root]
-        while temp_list:
-            this_level_ele_list=[]
-            this_level_list=[]
-            for i in temp_list:
-                if i.left:
-                    this_level_ele_list.append(i.left)
-                    this_level_list.append(i.left.val)
+    def levelOrder(self, root: TreeNode) -> [int]:
+        if not root: return []
+        res, queue = [], collections.deque()
+        queue.append(root)
+        while queue:
+            node = queue.popleft()
+            res.append(node.val)
+            if node.left: queue.append(node.left)
+            if node.right: queue.append(node.right)
+        return res
 
-                if i.right:
-                    this_level_ele_list.append(i.right)
-                    this_level_list.append(i.right.val)
-            if this_level_list:
-                result.append(this_level_list)
-            temp_list=this_level_ele_list
-
-        return result
