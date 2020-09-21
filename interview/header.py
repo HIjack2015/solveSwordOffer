@@ -8,7 +8,7 @@ def get_3_int():
     arr=input().strip().split(" ")
     i=int(arr[0])
     j=int(arr[1])
-    k=int(arr[1])
+    k=int(arr[2])
     return i,j,k
 
 def  print_arr(arr:[[]]):

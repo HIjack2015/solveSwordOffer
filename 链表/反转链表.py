@@ -5,15 +5,15 @@ class ListNode:
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        next_to_deal=head
+        to_deal=head
         prev=None
 
-        while next_to_deal is not None:
-            to_deal_next=next_to_deal.next
+        while to_deal is not None:
+            to_deal_next=to_deal.next
 
-            next_to_deal.next=prev
-            prev=next_to_deal
+            to_deal.next=prev
+            prev=to_deal
 
-            next_to_deal=to_deal_next
+            to_deal=to_deal_next
 
         return prev

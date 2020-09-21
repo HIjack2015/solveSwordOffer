@@ -1,3 +1,8 @@
+from typing import List
+
+from 树.test import TreeNode
+
+
 class Solution:
     def pathSum(self, root: TreeNode, sum: int) -> List[List[int]]:
         res, path = [], []
